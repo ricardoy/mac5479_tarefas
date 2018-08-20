@@ -1,0 +1,163 @@
+\documentclass{beamer}
+
+\usepackage{beamerthemeshadow}
+%\usepackage{beamercolorthemeseahorse}
+\usepackage{graphicx, caption}
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{beamercolorthemecrane}
+\usepackage{animate}
+\usepackage{xmpmulti}
+\usepackage[absolute,overlay]{textpos}
+
+\graphicspath{{img/}}
+
+\newcommand{\source}[1]{\begin{textblock*}{4cm}(0.7cm,8.6cm)
+    \begin{beamercolorbox}[ht=0.5cm,left]{framesource}
+        \usebeamerfont{framesource}\usebeamercolor[fg]{framesource} Fonte: {#1}
+    \end{beamercolorbox}
+\end{textblock*}}
+
+\title{Uma introdução sobre análise de formas, minha pesquisa e como
+  elas se relacionam} 
+
+\author{Ricardo Yamamoto Abe \\ ricardoy@ime.usp.br}
+
+\date{20 de agosto de 2018}
+
+\begin{document}
+
+\beamertemplatetransparentcoveredmedium
+
+\setbeamertemplate{footline}[frame number]
+
+\frame{\titlepage}
+
+%\begin{frame}[shrink]
+%\tableofcontents
+%\end{frame}
+
+
+\section{Sobre minha pesquisa}
+
+\subsection{Mestrado}
+
+\frame{
+  \frametitle{Mestrado}
+
+  \begin{itemize}      
+  \item Área definida: Aprendizagem de máquina (\emph{Deep Learning})
+  \item Detalhes ainda não estão muito claros (cursando disciplinas)
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{Mestrado}
+
+  Possibilidades:
+
+  \begin{itemize}
+  \item Metodologia para encontrar arquitetura ótima (ou uma
+    aproximação)
+  \item Visualização e entendimento das camadas
+  \item Eficiência energética
+  \end{itemize}
+}
+
+\subsection{Pesquisador voluntário}
+
+\frame {
+  \frametitle{Pesquisador voluntário}
+
+  \begin{itemize}    
+  \item Radioterapia em câncer de mama
+  \item Segundo \cite{deep_inspiration}, técnicas de prender a
+    respiração podem ajudar a dose de radiação que atinge o coração
+  \item Monitoramento de posição da paciente em tempo real: emissão da
+    radiação é desligada caso sejam notados diferenças relevantes
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{Pesquisador voluntário}
+  Um marcador é colocado sobre o paciente.
+
+  \begin{center}
+    \includegraphics[scale=0.25]{patient.jpg}
+    \source{www.varian.com}
+  \end{center}
+}
+
+\frame{
+  \frametitle{Pesquisador voluntário}
+  
+  Um sistema captura as posições do marcador em tempo real e
+  identifica suas mudanças de posição.
+  
+  \begin{center}
+    \includegraphics[scale=0.25]{info.jpg}
+    \source{www.varian.com}
+  \end{center}
+ 
+}
+
+\section{Sobre análise de formas}
+
+\frame{
+  \frametitle{Análise de formas}
+  
+  \begin{itemize}
+  \item Formas: palavras na linguagem visual
+  \item Análise de modelos em 3D tem custo computacional muito alto:
+    abordagem utilizando formas em 2D é viável
+  \item Caráter multidisciplinar: medicina, biologia, física, etc.
+  \end{itemize}
+}
+
+\subsection{Etapas}
+
+\frame{
+  \frametitle{Etapas envolvidas}
+
+  \begin{itemize}
+  \item Aquisição
+  \item Detecção de formas
+  \item Filtro de ruído
+  \item Operação sobre formas: normalização
+  \item Transformação: evolução, representação
+  \item Classificação: supervisionada, não-supervisionada,
+    similaridade, \emph{matching}
+  \end{itemize} 
+}
+
+\section{Relação entre pesquisa e análise de formas}
+
+\frame{
+  \frametitle{Relação entre pesquisa e análise de formas}
+
+  \begin{itemize}
+  \item Radioterapia: \emph{tracking} do marcador, registro de imagens
+  \item \emph{Deep Learning}: diferentes representações e
+    características podem ajudar a gerar visualizações das camadas
+  \end{itemize}
+}
+
+
+
+\begin{frame}
+  \frametitle{References}
+  \footnotesize{
+    \begin{thebibliography}{99}
+      
+    \bibitem[Latty et al., 2015]{deep_inspiration} Latty D, Stuart KE, Wang W, Ahern V.
+      \newblock Review of deep inspiration breath-hold techniques for the treatment of breast cancer
+
+      
+    
+    \end{thebibliography}
+        
+  }
+\end{frame}
+
+
+\end{document}
